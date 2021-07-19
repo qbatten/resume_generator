@@ -1,0 +1,27 @@
+categories:
+  - title: Professional Experience
+    items:
+      - company: Cool Company
+        dates: 2019 - Present
+        job_title: Manager
+        description: [
+          "Organize and manage day-to-day stuff.",
+          "Have meetings, fill out forms.",
+          "Lead implementation of company initiatives.",
+        ]
+
+      - company: Fun Factory
+        dates: 2017 - 2018
+        job_title: Apprentice Fun Fellow
+        description: [
+          "Create widgets.",
+          "Leverage factory equipment to improve overall fun synergy.",
+        ]
+
+  - title: Leadership Experience
+    items:
+      - company: Camp Cobblestone
+        dates: 2016 - 2017
+        job_title: Cabin Counselor in Training
+        description: >
+          Served as a role model for other campers, camped crazy well, organized games for the cabin, etc.

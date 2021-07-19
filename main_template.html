@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="styles.css">
+<div class="resume-body">
+    {% for category in categories -%}
+    <div class="exp-category">
+        <div class="exp-category-title">
+            <hr>
+            {{ category.title }}
+        </div>
+        {% for item in category["items"] -%} 
+        <div class="exp-item">
+            <div class="sidebar-wrapper">
+                <div>
+                    <div class="exp-item-company">{{ item.company }}</div>
+                </div>
+                <div class="exp-item-dates text-align-right"> {{ item.dates }}</div>
+            </div>
+            <div class="exp-item-jtitle">{{ item.job_title }}</div>
+            <div class="exp-item-contents">
+                {% if item.description is iterable 
+                    and (item.description is not string and item.description is not mapping) -%}
+                <ul>
+                    {% for list_item in item["description"] -%}
+                    <li>{{ list_item | replace("\n", "") }}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                {{ item["description"] | replace("\n", "")  }}
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
